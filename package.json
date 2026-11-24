@@ -1,0 +1,18 @@
+{
+  "name": "well-wishes-cartoon",
+  "version": "1.0.0",
+  "description": "Vertical animated cartoon short - The Well That Heard the Same Wish",
+  "private": true,
+  "scripts": {
+    "install:playwright": "npx playwright install chromium && npx playwright install-deps chromium",
+    "render:stills": "node render.mjs stills/a \"0,90,210,330,450,570,690,809\"",
+    "render:frames": "node render.mjs frames \"0-809\"",
+    "sheet": "python sheet.py stills/a stills/sheet_a.jpg"
+  },
+  "devDependencies": {
+    "playwright": "^1.44.0"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}
